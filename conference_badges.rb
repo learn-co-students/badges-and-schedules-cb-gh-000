@@ -10,11 +10,9 @@ def badge_maker(name)
 end
 
 def assign_rooms(array)
-  room_assignments = []
-  array.each do |name|
-    room_assignments << "Hello, #{name}! You'll be assigned to room #{array.index(name) + 1}!"
+  array.collect do |name|
+    "Hello, #{name}! You'll be assigned to room #{array.index(name) + 1}!"
   end
-  return room_assignments
 end
 
 def printer(array)
