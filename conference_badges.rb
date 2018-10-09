@@ -1,10 +1,8 @@
 # Write your code here.
 def batch_badge_creator(array)
-  messages = []
-    array.each do |name|
-      messages << badge_maker(name)
+    array.collect do |name|
+      badge_maker(name)
     end
-  return messages
 end
 
 def badge_maker(name)
